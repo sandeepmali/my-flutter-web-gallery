@@ -2,6 +2,11 @@
 
 A new Flutter project.
 
+1)Application wrote in flutter Dart.
+2) Images are fetcched from Pixabay API and showing in Grid view.
+3) Images grid column is dynamic. plz check attached images in image folder.
+4) while scrollowing at the end of first feech it will load new immages from server.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
