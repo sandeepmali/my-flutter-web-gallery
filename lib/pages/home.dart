@@ -135,7 +135,7 @@ class _HomePageState extends State<HomePage> {
                   builder: (context, constraints) {
                     // Calculate the number of columns based on the screen width
                     double width = constraints.maxWidth;
-                    int columns = (width / 150)
+                    int columns = (width / 160)
                         .floor(); // 150 is the desired width of each item
                     imageUrls.addAll(imageProvider.images.hits!);
 
@@ -225,7 +225,7 @@ class ListItem extends StatelessWidget {
                 ),
                 padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
