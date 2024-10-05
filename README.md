@@ -7,6 +7,14 @@ A new Flutter project.
 3) Images grid column is dynamic. plz check attached images in image folder.
 4) while scrollowing at the end of first feech it will load new immages from server.
 
+<a href="https://github.com/sandeepmali/my-flutter-web-gallery/tree/master/video">
+  <img src="https://github.com/sandeepmali/my-flutter-web-gallery/tree/master/video" alt="Watch the video" width="400"/>
+</a>
+![App Screenshot](image/img.png)
+![App Screenshot](image/img2.png)
+![App Screenshot](image/img3.png)
+![App Screenshot](image/img1.png)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
