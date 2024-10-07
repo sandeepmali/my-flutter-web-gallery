@@ -10,10 +10,11 @@ A new Flutter project.
 <a href="https://github.com/sandeepmali/my-flutter-web-gallery/tree/master/video">
   <img src="https://github.com/sandeepmali/my-flutter-web-gallery/tree/master/video" alt="Watch the video" width="400"/>
 </a>
-![App Screenshot](image/img.png)
-![App Screenshot](image/img2.png)
-![App Screenshot](image/img3.png)
-![App Screenshot](image/img1.png)
+![App Screenshot](assets/images/img.png)
+![App Screenshot](assets/images/img1.png)
+![App Screenshot](assets/images/img2.png)
+![App Screenshot](assets/images/img3.png)
+
 
 ## Getting Started
 
