@@ -17,11 +17,11 @@ class _HomePageState extends State<HomePage> {
   bool _isLoading = false;
   var requestCount = 1;
   var noOfRecordsPerRequest = 25;
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    // Fetch users when the screen is first loaded
   }
 
   @override
@@ -35,12 +35,8 @@ class _HomePageState extends State<HomePage> {
           _scrollController.position.maxScrollExtent) {
         _isLoading = true;
         requestCount++;
-        print("end of grid");
-        print(noOfRecordsPerRequest);
-        Provider.of<ImagesProvider>(context, listen: false).fetchImages(
-            requestCount,
-            noOfRecordsPerRequest);
-        print(imageUrls.length);// Fetch more images when scrolling to the bottom
+        Provider.of<ImagesProvider>(context, listen: false)
+            .fetchImages(requestCount, noOfRecordsPerRequest);
       }
     });
     return Scaffold(
@@ -53,7 +49,8 @@ class _HomePageState extends State<HomePage> {
             child: IconButton(
               icon: Icon(Icons.phone),
               onPressed: () {
-                final delegate = Router.of(context).routerDelegate as AppRouterDelegate;
+                final delegate =
+                    Router.of(context).routerDelegate as AppRouterDelegate;
                 delegate.setNewRoutePath(AppRoute.contact());
               },
             ),
@@ -63,7 +60,8 @@ class _HomePageState extends State<HomePage> {
             child: IconButton(
               icon: Icon(Icons.notifications),
               onPressed: () {
-                final delegate = Router.of(context).routerDelegate as AppRouterDelegate;
+                final delegate =
+                    Router.of(context).routerDelegate as AppRouterDelegate;
                 delegate.setNewRoutePath(AppRoute.notiifcation());
               },
             ),
@@ -125,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                           .notify();
                       Provider.of<ImagesProvider>(context, listen: false)
                           .fetchImages(1, noOfRecordsPerRequest,
-                          searchText: _controllerSearchText.text);
+                              searchText: _controllerSearchText.text);
                     },
                   )
                 ],
@@ -150,7 +148,7 @@ class _HomePageState extends State<HomePage> {
                         itemCount: imageUrls.length,
                         itemBuilder: (context, index) {
                           final image = imageUrls[index];
-                          if (index == imageUrls.length-1) {
+                          if (index == imageUrls.length - 1) {
                             print('show loader');
                             // Show loader at the bottom
                             return Center(child: CircularProgressIndicator());

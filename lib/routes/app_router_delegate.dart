@@ -32,9 +32,6 @@ class AppRouterDelegate extends RouterDelegate<AppRoute>
         onPopPage: (route, result) => route.didPop(result));
   }
 
-//currentConfiguration is called whenever there might be a change in route
-//It checks for the current page or route and return a new route information
-//This is what populates our browser history
   @override
   AppRoute? get currentConfiguration {
     if (notifier.isUnknown) {
@@ -56,8 +53,6 @@ class AppRouterDelegate extends RouterDelegate<AppRoute>
     return AppRoute.unknown();
   }
 
-//This is called whenever the system detects a new route is passed
-//It checks the current route through the configuration and uses that to update the notifier
   @override
   Future<void> setNewRoutePath(AppRoute configuration) async {
     if (configuration.isNotification) {
